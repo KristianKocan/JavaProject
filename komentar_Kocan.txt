@@ -1,0 +1,76 @@
+Môj github repozitár: https://github.com/MIP-FIIT/latex-KristianKocan
+
+Použité balíky:
+\usepackage{graphicx}	-balíèek slúžiaci na prácu s obrázkami
+\usepackage{cite}		-balíèek slúžiaci na vytváranie citácií v texte
+\usepackage{url}		-balíèek slúžiaci na vytváranie hypertextových odkazov
+\usepackage[T1]{fontenc}	-balíèek slúžiaci na vypisovanie špeciálnych znakov, diakritiky, ...
+\usepackage{array}		-balíèek slúžiaci na rôzne rozšírené úpravy tabu¾ky
+\usepackage{dblfloatfix}	-balíèek potrebný pri vkladaní obrázka cez dva ståpce textu (na celú stranu)
+\usepackage{float}		-balíèek slúžiaci nadefinovanie pozícií objektov a tabuliek
+
+Zoznam použitých funkcií LaTeXu:
+Príkazy na definovanie štruktúry dokumentu a obsahu:
+\documentclass[format, typ_dokumentu]{pouzita_sablona}     -definovanie dokumentu, formát, typ, pouzita sablona pre dokument
+\title{Nazov_clanku}			-názov èlánku - nadpis
+\begin{abstract}			-zaèiatok abstraktu
+\end{abstract}			-koniec abstraktu
+\author{}				-hlavièka dokumentu, informácie o autorovi
+\begin{klucove_slova}		-vypis klucovych slov
+\end{klucove_slova}			-ukoncenie vypisu
+\begin{document}			-zaèiatok dokumentu
+\end{document}			-koniec dokumentu
+\section{názov_sekcie}		-vytvorenie sekcie
+\subsection{názov_podsekcie}		-vytvorenie podsekcie
+
+Formátovanie textu na úrovni odstavcov:
+\textbf{text}			-bold font, zvýraznenie textu
+\textbf{text}			-italic font, zakrivenie textu
+
+Použitie zoznamov:
+\begin{typ}			-zaciatok zoznamu, nastavenie typu-itemize(odrazky),enumerate(cislovanie)...
+\item stlpec zoznamu		-polozka zoznamu 
+\end{itemize}			-koniec zoznamu
+
+Vkladanie obrázkov:
+\begin{figure*}				-zaciatok obrazku
+\centering					-centrovanie
+\includegraphics [sirka]{adresa k obrazku}	-nastavenie sirky, vlozenie cesty k vkladanemu obrazku
+\caption{popis obrazku}			-popis obrazku,text pod obrazkom
+\label{obrazok1}				-oznacenie, znacka obrazku, pouzivame, ak nan odkazujeme v texte
+\end{figure*}				-koniec obrazku
+
+Vkladanie tabuliek:
+\begin{table}[parametre]			-zaciatok tabulky
+\small
+\centering					-centrovanie
+\caption{nazov tabulky}			-nazov tabulky, text nad tabulkou
+\label{tabulka1}				-znacka tabulky
+\begin{tabular}{|M{3cm}|M{3cm}|N}		-definovanie riadkov a stlpcov tabulky
+\hline
+\textbf{nazov stlpca} & \textbf{nazov stlpca}	-polozky v tabulke
+\\ \hline 
+Learning objects          & 81.34\%      
+\\ \hline
+Concepts                  & 72.47\%        
+\\ \hline
+\end{tabular}				-koniec tabulky
+\end{table}
+
+Tvorba vzorcov
+:
+\begin{equation}				-zaciatok vzorca
+premenna = vyraz				-samotny vyraz
+\end{equation}				-koniec vzorca
+
+Bibliografia a citovanie pomocou nástroja BibTeX:
+\bibliographystyle{IEEEtran}			-nastavenie stylu bibliografie
+\bibliography{nazov suboru s bibliografiou.bib}	-nacitanie suboru s bibliografiou
+\cite{nazov zaznamu}			-odkaz na bibliograficky zaznam
+- nutne najprv vytvorit subor.bib so zaznamami!!
+
+Sádzanie špeciálnych znakov ako uvodzovky, percentá a podobne:
+\znak
+\textsc{\char39} 				-vlozi apostrof do textu, nie je nutne pouzit extra balicek(usepackage)
+``slovo''					-vypise slovo v uvodzovkach
+
